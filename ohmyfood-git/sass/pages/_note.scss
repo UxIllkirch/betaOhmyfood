@@ -1,0 +1,51 @@
+.menu--note {
+  color: #3c1318;
+  background-color: $color-note;
+  @include phone-large {
+    padding: 50px 10px;
+  }
+  h2 {
+    font: 5rem $font-note;
+    @include phone-large {
+      font-size: 4rem;
+    }
+  }
+}
+
+.menu {
+  &__footer {
+    font: 3.5rem $font-note;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    @include phone-large {
+      font-size: 3rem;
+      margin-top: 50px;
+    }
+    .note {
+      height: 40px;
+      margin-right: 20px;
+      @include phone-large {
+        height: 30px;
+      }
+    }
+  }
+}
+
+// Animation
+span.underline--note {
+  transition: background-size 0.3s;
+  background: linear-gradient(
+      to top,
+      transparent 4px,
+      rgb(233, 212, 25) 4px,
+      rgb(55, 31, 192) 6px,
+      transparent 6px
+    )
+    no-repeat;
+  background-size: 0 100%;
+  &:hover {
+    background-size: 100% 100%;
+  }
+}

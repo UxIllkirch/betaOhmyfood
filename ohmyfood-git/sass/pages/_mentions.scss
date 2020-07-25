@@ -1,0 +1,7 @@
+.mentions {
+  font: 1.6rem $font-omf;
+  padding: 50px 50px;
+  @include phone-large {
+    padding: 50px 10px 0;
+  }
+}

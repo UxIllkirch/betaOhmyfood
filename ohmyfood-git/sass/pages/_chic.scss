@@ -1,0 +1,81 @@
+.menu--chic {
+  font: 400 1.8rem $font-menu-chic;
+  color: #a56799;
+  background-color: $color-chic;
+  @include phone {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font: 4rem $font-chic;
+    background: -webkit-linear-gradient(-45deg, #d8852d, #8f5cfd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include phone-large {
+      font-size: 3rem;
+    }
+  }
+  h3 {
+    font-size: 2.2rem;
+    @include phone-large {
+      font-size: 1.8rem;
+    }
+    &:nth-of-type(1) {
+      color: #c67411;
+    }
+    &:nth-of-type(2) {
+      color: #a56799;
+    }
+    &:nth-of-type(3) {
+      color: #6e4ccc;
+    }
+    & > img {
+      height: 7px;
+      @include phone {
+        height: 2px;
+      }
+    }
+  }
+}
+
+.container-menu__menu__line {
+  &--orange {
+    color: #c67411;
+  }
+  &--vin {
+    color: #a56799;
+  }
+  &--violet {
+    color: #6e4ccc;
+  }
+  & p:last-of-type {
+    font-size: 1.9rem;
+    font-weight: bold;
+  }
+}
+
+span.underline {
+  &-orange {
+    transition: background-size 0.3s;
+    background: linear-gradient(to top, #c67411 2px, transparent 2px) no-repeat;
+    background-size: 0 100%;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+  &-vin {
+    transition: background-size 0.3s;
+    background: linear-gradient(to top, #a56799 2px, transparent 2px) no-repeat;
+    background-size: 0 100%;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+  &-violet {
+    transition: background-size 0.3s;
+    background: linear-gradient(to top, #6e4ccc 2px, transparent 2px) no-repeat;
+    background-size: 0 100%;
+    &:hover {
+      background-size: 100% 100%;
+    }
+  }
+}

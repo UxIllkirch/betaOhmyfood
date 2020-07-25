@@ -1,0 +1,76 @@
+.menu {
+  font: 1.8rem $font-menu-delice;
+  min-height: 900px;
+  padding: 75px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  @include phone-large {
+    font-size: 1.6rem;
+    width: initial;
+    margin: 0;
+    padding: 50px 10px 0;
+  }
+  &__header {
+    margin-bottom: 50px;
+    .note {
+      height: 70px;
+    }
+  }
+  h3 {
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    @include phone-large {
+      font-size: 2rem;
+      justify-content: center;
+      & > span[class*="underline"] {
+        margin: 0 10px;
+      }
+    }
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+    & > img {
+      height: 6px;
+      @include phone-large {
+        height: 2px;
+      }
+    }
+  }
+  &__line {
+    line-height: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    @include phone-large {
+      line-height: 1.5rem;
+      display: block;
+    }
+    & p.bold {
+      font-size: 2rem;
+      font-weight: bold;
+      @include phone-large {
+        font-size: 1.8rem;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+// Animation
+span.underline {
+  transition: background-size 0.3s;
+  background: linear-gradient(
+      to top,
+      transparent 4px,
+      green 4px,
+      green 6px,
+      transparent 6px
+    )
+    no-repeat;
+  background-size: 0 100%;
+  &:hover {
+    background-size: 100% 100%;
+  }
+}

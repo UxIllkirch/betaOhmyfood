@@ -1,0 +1,47 @@
+// @import './sass/**/*';
+@import './sass/abstracts/variables';'./sass/abstracts/mixins',
+@import './sass/components/card','./sass/components/menu';
+
+@import './sass/layout/card-container','./sass/layout/container-menu', './sass/layout/footer', './sass/layout/header';
+
+@import './sass/pages/chic','./sass/pages/delice','./sass/pages/mentions','./sass/pages/note','./sass/pages/palette';
+/*
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0 0 120px;
+  @include tablet {
+    margin: 0 0 100px;
+  }
+  &.footer-fix {
+    @include tablet {
+      margin: 0 0 50px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+   
+}
+
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+// Masquage du texte réservé aux lecteurs d'écran
+.hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip-path: inset(50%);
+}

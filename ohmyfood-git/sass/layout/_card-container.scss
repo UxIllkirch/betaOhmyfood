@@ -1,0 +1,22 @@
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: $card-width * 4 + $card-margin * 3;
+  // Pour revenir en 2 par 2
+  // width: $card-width * 2 + $card-margin;
+  margin: 50px auto 60px;
+  grid-gap: $card-margin;
+
+  @include desktop {
+    width: $card-width * 2 + $card-margin;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include tablet {
+    width: ($card-width * 0.75) * 2 + $card-margin;
+  }
+  @include phone {
+    width: $card-width;
+    grid-template-columns: 1fr;
+    grid-gap: $card-margin / 2 0;
+  }
+}

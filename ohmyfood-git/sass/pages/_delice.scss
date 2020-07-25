@@ -1,0 +1,12 @@
+.menu--delice {
+  background-color: $color-delice;
+  h2 {
+    font: 5rem $font-delice;
+    background: -webkit-linear-gradient(-45deg, #0f06de, #007ff8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include phone-large {
+      font-size: 3.5rem;
+    }
+  }
+}

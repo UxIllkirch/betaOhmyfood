@@ -1,0 +1,12 @@
+.menu--palette {
+  background-color: $color-palette;
+  h2 {
+    font: 5rem $font-palette;
+    background: -webkit-linear-gradient(-45deg, #248c15, #bdff77);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include phone-large {
+      font-size: 3.5rem;
+    }
+  }
+}

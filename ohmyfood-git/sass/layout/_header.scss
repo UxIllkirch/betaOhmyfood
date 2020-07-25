@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: $color-green;
+  @include tablet {
+    height: 80px;
+  }
+  img {
+    height: 50px;
+    padding-top: 10px;
+    @include tablet {
+      height: 45px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: $card-width;
+  height: $card-height;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  @include tablet {
+    width: $card-width * 0.75;
+    height: $card-height * 0.75;
+  }
+  @include phone {
+    width: $card-width;
+    height: $card-height;
+  }
+  & h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    width: 100%; // Fix Firefox
+    margin-bottom: 10px;
+    text-align: center;
+    @include tablet {
+      margin-bottom: 5px;
+    }
+    @include phone {
+      margin-bottom: 10px;
+    }
+    @include tablet {
+      font-size: 2.4rem;
+    }
+    @include phone {
+      font-size: 3rem;
+    }
+  }
+  & h3 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    @include tablet {
+      font-size: 2.4rem;
+    }
+    @include phone {
+      font-size: 2.8rem;
+    }
+  }
+  &__note {
+    color: #3c1318;
+    background-color: $color-note;
+    h2 {
+      font-family: $font-note;
+    }
+    h3 {
+      font-family: $font-menu-note;
+      font-style: italic;
+    }
+  }
+  &__chic {
+    background-color: $color-chic;
+    h2 {
+      font: 2.5rem $font-chic;
+      background: -webkit-linear-gradient(-45deg, #d8852d, #8f5cfd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include tablet {
+        font-size: 1.9rem;
+      }
+      @include phone {
+        font-size: 2.5rem;
+      }
+    }
+    h3 {
+      font: 2.5rem $font-menu-chic;
+      color: #c77413;
+      @include tablet {
+        font-size: 1.9rem;
+      }
+      @include phone {
+        font-size: 2.5rem;
+      }
+    }
+  }
+  &__delice {
+    background-color: $color-delice;
+    h2 {
+      font-family: $font-delice;
+      background: -webkit-linear-gradient(-45deg, #0f06de, #007ff8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h3 {
+      font-family: $font-menu-delice;
+      color: #1388fb;
+    }
+  }
+  &__palette {
+    background-color: $color-palette;
+    h2 {
+      font-family: $font-palette;
+      background: -webkit-linear-gradient(-45deg, #248c15, #bdff77);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h3 {
+      font-family: $font-menu-palette;
+      color: #68bc48;
+    }
+  }
+}
+
+// Note de musique
+article {
+  position: relative;
+  .note {
+    position: absolute;
+    top: 75px;
+    height: 60px;
+    @include tablet {
+      top: 55px;
+      height: 45px;
+    }
+    @include phone {
+      top: 75px;
+      height: 60px;
+    }
+  }
+}
+
+// Animation zoom et opacité réduite sans grossissement du cadre
+.card {
+  &:hover > img,
+  &:hover > h2,
+  &:hover > h3 {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  > img,
+  > h2,
+  > h3 {
+    transition: all 250ms ease-in;
+  }
+}
